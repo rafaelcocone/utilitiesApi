@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/guias/user_pdf/{guia}', [   App\Http\Controllers\GuiasController::class, 'pdfGuias'])->name('user.pdf');
+
