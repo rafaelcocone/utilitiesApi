@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
+use \Milon\Barcode\DNS1D;
+
 class GuiasController extends Controller
 {
 
@@ -27,14 +29,20 @@ class GuiasController extends Controller
         $rastreo =    $guia;
         $qrcode = base64_encode(
             QrCode::format('svg')
-                ->size(200)
+                ->size(150)
                 ->merge(public_path('images/logo-menu.png'),0.3, true )
                 ->errorCorrection('H')
                 ->generate('https://moving-pack.com/rastreo/?c='.$rastreo));
 
+        $barcode = DNS1D::getBarcodePNG($rastreo, 'C39+',3,33);
+
         $data = [
             'rastreo' => $rastreo,
-            'qrcode' => $qrcode
+            'qrcode' => $qrcode,
+            'barcode' => $barcode,
+
+
+
         ];
 
         $pdf = Pdf::loadView('guias.guias',  $data)->setPaper($customPaper, 'landscape');
