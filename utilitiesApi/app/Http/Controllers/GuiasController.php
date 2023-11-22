@@ -34,7 +34,7 @@ class GuiasController extends Controller
                 ->errorCorrection('H')
                 ->generate('https://moving-pack.com/rastreo/?c='.$rastreo));
 
-        $barcode = DNS1D::getBarcodePNG($rastreo, 'C39+',3,33);
+        $barcode = DNS1D::getBarcodePNG($rastreo, 'EAN13',3,33);
 
         $data = [
             'rastreo' => $rastreo,
@@ -62,7 +62,7 @@ class GuiasController extends Controller
                 ->errorCorrection('H')
                 ->generate('https://moving-pack.com/rastreo/?c='.$rastreo));
 
-        $barcode = DNS1D::getBarcodePNG($rastreo, 'C39+',3,33);
+        $barcode = DNS1D::getBarcodePNG($rastreo, 'EAN13',3,33);
 
         $data = [
             'rastreo' => $rastreo,

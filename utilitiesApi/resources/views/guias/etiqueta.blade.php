@@ -43,71 +43,75 @@
         </tr>
 
         <tr>
-            <td>REMITENTE</td>
-            <td colspan='2'>CONSIGNATARIO</td>
+            
+            <td colspan='3'>
+                <p class="remitente">Franffer Mexicana S.A. de C.V. </span>
+                    Avenida Malintzi 86 Col. Malintzi Puebla, Puebla C.P. 72210 -
+                    2222428128<br> moving-pack.com 
+                </p>
+            </td>
+            
         </tr>
 
         <tr>
-            <td>REMITENTE</td>
-            <td colspan='2'></td>
+            <td colspan='3'>
+                <p class="destinatario">Franffer Mexicana S.A. de C.V. </span>
+                    Avenida Malintzi 86 Col. Malintzi Puebla, Puebla C.P. 72210 -
+                    2222428128<br> moving-pack.com 
+                </p> 
+            </td>
         </tr>
 
 
-
+        <tr>
+            <td colspan="3">
+                <p class="mercancias">
+                    Mecnacio</td>
+                </p>
+        </tr>
 
 
 
         <tr>
             <td  >
-                <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="150px" height="60px"/>
+                <div align="left">
+                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="140px" height="40px"/>
+                </div>
+                <p class="codebar">{!! $rastreo !!}</p>
             </td>
-            <td colspan='2'>
-               <p class="firma">
-                FECHA, NOMBRE Y FIRMA DE QUIEN RESIBE
-               </p>
-
+            <td colspan='3' >
+                <div align="right">
+                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="140px" height="40px" />
+                </div>
+                <p class="codebar">{!! $rastreo !!}</p>
             </td>
         </tr>
 
 
+
+        <tr>
+            <td colspan="3" class="firma" >
+                    </br></br>
+                    <p > 
+                        FECHA, NOMBRE Y FIRMA DE QUIEN RESIBE
+                    </p>
+             </td>
+        </tr>
+       
     </table>
 
-
-
-   <div class="contenedor">
-        <div class="renglon">
-            <div class="columna">
-                {!! $rastreo !!}
-                <img src="{{public_path().'/images/logo-menu.png'   }}" alt="Moving-pack" width="80px" height="80px" >
-            </div>
-
-            <div class="columna">
-                <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="200px" height="60px" />
-                {!! $rastreo !!}
-            </div>
-        </div>
-
-        <div class="renglon">
-            <div >
-                <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="200px" height="60px" class="columna45"/>
-                {!! $rastreo !!}
-            </div>
-        </div>
-   </div>
-
-
-   <style>
+<style>
 
 @page {
-		margin-left: 0.5cm;
-		margin-right: 0.5cm;
+		margin-left: 0.4cm;
+		margin-right: 0.4cm;
         margin-top: 0.5cm;
 		margin-button: 0.5cm;
 	}
 
 
 table, th, td {
-  border: 1px solid ;
+  border: 1px  solid;
 }
 
 .girar45 {
@@ -115,17 +119,49 @@ table, th, td {
 }
 
 .girar45 span {
-    font: 1rem "Fira Sans", sans-serif;
+    font: 1rem "New Courier", Verdana;
 }
 
 .rastreo {
-    backgroud-collator_a
+    align:center;
 }
 
-.firma {
-    font: 0.5rem "Fira Sans", sans-serif;
+.remitente {
+    margin: 0 auto;
+    width: 100%;
+    height: 30px;
+    font: .5rem "New Courier", Verdana;
+}
+.destinatario {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    font: .7rem "New Courier", Verdana;
+}
+.mercancias {
+    margin: 0 auto;
+    width: 100%;
+    height: 40px;
+    font: .5rem "New Courier", Verdana;
 }
 
+.codebar {
+    margin: 0 auto;
+    text-align: center;
+    font: .5rem "New Courier", Verdana;
+}
+
+.firma{
+    width: 300px;
+}
+
+.firma p  {
+    border-top: 1 solid;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    font: .6rem "New Courier", Verdana;
+}
 
 
 
