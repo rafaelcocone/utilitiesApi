@@ -17,5 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/guias/user_pdf/{guia}', [   App\Http\Controllers\GuiasController::class, 'pdfGuias'])->name('user.pdf');
+Route::get('/guias/etiqueta/{guia}', [   App\Http\Controllers\GuiasController::class, 'etiqueta'])->name('etiqueta.pdf');
 
+Route::get('/guias/carta/{guia}', [   App\Http\Controllers\GuiasController::class, 'carta'])->name('carta.pdf');

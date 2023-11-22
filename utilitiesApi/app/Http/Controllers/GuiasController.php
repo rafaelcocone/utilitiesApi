@@ -16,7 +16,7 @@ class GuiasController extends Controller
 
 
 
-    public function pdfGuias($guia){
+    public function etiqueta($guia){
 
 
         //1 inch = 72 point
@@ -45,8 +45,38 @@ class GuiasController extends Controller
 
         ];
 
-        $pdf = Pdf::loadView('guias.guias',  $data)->setPaper($customPaper, 'landscape');
+        $pdf = Pdf::loadView('guias.etiqueta',  $data)->setPaper($customPaper, 'landscape');
         //return $pdf->download($guia.'.pdf');
         return $pdf->stream($guia.'.pdf');
     }
+
+
+
+    public function carta($guia){
+
+        $rastreo =    $guia;
+        $qrcode = base64_encode(
+            QrCode::format('svg')
+                ->size(150)
+                ->merge(public_path('images/logo-menu.png'),0.3, true )
+                ->errorCorrection('H')
+                ->generate('https://moving-pack.com/rastreo/?c='.$rastreo));
+
+        $barcode = DNS1D::getBarcodePNG($rastreo, 'C39+',3,33);
+
+        $data = [
+            'rastreo' => $rastreo,
+            'qrcode' => $qrcode,
+            'barcode' => $barcode,
+
+
+
+        ];
+
+        $pdf = Pdf::loadView('guias.etiqueta',  $data);
+        //return $pdf->download($guia.'.pdf');
+        return $pdf->stream($guia.'.pdf');
+    }
+
+
 }
