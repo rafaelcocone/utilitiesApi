@@ -111,7 +111,7 @@
 
 
 table, th, td {
-  border: 1px  solid;
+  border: 1px  ;
 }
 
 .girar45 {

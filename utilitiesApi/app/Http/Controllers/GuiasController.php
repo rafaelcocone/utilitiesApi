@@ -46,8 +46,8 @@ class GuiasController extends Controller
         ];
 
         $pdf = Pdf::loadView('guias.etiqueta',  $data)->setPaper($customPaper, 'landscape');
-        //return $pdf->download($guia.'.pdf');
-        return $pdf->stream($guia.'.pdf');
+        return $pdf->download($guia.'.pdf');
+        //return $pdf->stream($guia.'.pdf');
     }
 
 
@@ -78,5 +78,15 @@ class GuiasController extends Controller
         return $pdf->stream($guia.'.pdf');
     }
 
+
+
+
+
+    public function pruebas(Request $request){
+    
+        
+
+        return $request;
+    }
 
 }
