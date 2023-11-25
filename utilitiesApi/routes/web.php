@@ -19,12 +19,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/guias/etiqueta/{guia}', [   App\Http\Controllers\GuiasController::class, 'etiqueta'])->name('etiqueta.pdf');
+Route::get('/guias/etiquetas', [   App\Http\Controllers\GuiasController::class, 'etiqueta'])->name('etiqueta.pdf');
 
-Route::get('/guias/carta/{guia}', [   App\Http\Controllers\GuiasController::class, 'carta'])->name('carta.pdf');
+Route::get('/guias/carta', [   App\Http\Controllers\GuiasController::class, 'carta'])->name('carta.pdf');
 
 
 
-Route::resource('/guias/prueba',GuiasController::class)->except(['show','destroy']);
+
 
 Route::get('/guias/pruebas', [   App\Http\Controllers\GuiasController::class, 'pruebas'])->name('guias.pdf');
+
+
