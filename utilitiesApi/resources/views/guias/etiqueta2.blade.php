@@ -145,9 +145,9 @@
         <tr>
             <td colspan="2" width='200px' height="80px" >
 
-                <div align="center">
+                <div align="left">
                     <p class="codebar">  RASTREO</p>
-                    <img src="data:image/png;base64,' . {!! $barcode1 !!} . '" alt="barcode"  width="120px" height="40px"/>
+                    <img src="data:image/png;base64,' . {!! $barcode1 !!} . '" alt="barcode"  width="160px" height="40px"/>
                     <p class="codebar">{!! $rastreo !!}</p>
                 </div>
 
@@ -155,9 +155,9 @@
             </td>
             <td colspan="2" width='100px' height="80px">
 
-                <div align="center">
+                <div align="right">
                     <p class="codebar"> NUMERO DE GUIA</p>
-                    <img src="data:image/png;base64,' . {!! $barcode2 !!} . '" alt="barcode"  width="140px" height="40px"/>
+                    <img src="data:image/png;base64,' . {!! $barcode2 !!} . '" alt="barcode"  width="160px" height="40px"/>
                     <p class="codebar">{!! $codeguia !!}</p>
                 </div>
 
@@ -192,7 +192,7 @@
 	}
 
     table, th, td {
-        border: 1px solid ;
+        border: 1px  ;
     }
 
     .mensaje45 {

@@ -39,7 +39,7 @@
 
                         </td>
                         <td colspan="3" width='300px' >
-                            <div class="datadescripcion">{!! $datos["origen"]["nombre_razon_social"] !!}</div>
+                            <div class="datadescripcion"><b>{!! $datos["origen"]["nombre_razon_social"] !!}</b></div>
                             <div class="datadescripcion">
                                 {!!  $datos["origen"]["direccion"]["calle"] !!}
                                 {!!  $datos["origen"]["direccion"]["numero_exterior"] !!}
@@ -65,7 +65,7 @@
                             </p>
                         </td>
                         <td colspan="3" width='300px' >
-                        <div class="datadescripcion">{!! $datos["destino"]["nombre_razon_social"] !!}</div>
+                            <div class="datadescripcion"><b>{!! $datos["destino"]["nombre_razon_social"] !!}</b></div>
                             <div class="datadescripcion">
                                 {!!  $datos["destino"]["direccion"]["calle"] !!}
                                 {!!  $datos["destino"]["direccion"]["numero_exterior"] !!}
@@ -363,10 +363,10 @@
     <style>
 
     @page {
-		margin-left: 0.4cm;
-		margin-right: 0.4cm;
-        margin-top: 0.5cm;
-		margin-button: 0.5cm;
+		margin-left: 2cm;
+		margin-right: 2cm;
+        margin-top: 2cm;
+		margin-button: 2cm;
 	}
 
     table, th, td {
@@ -380,7 +380,7 @@
     .tituloempresa {
         margin: 0 auto;
         text-align: left;
-        font-weight: bold;
+        font-weight:  bolder;
         font: .4rem "New Courier", Verdana;
     }
 
@@ -394,7 +394,7 @@
     .datadescripcion {
         margin: 0 auto;
         text-align: left;
-
+        font-weight:  bolder;
         font: .5rem "New Courier", Verdana;
     }
 

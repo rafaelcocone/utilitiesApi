@@ -75,13 +75,13 @@
         <tr>
             <td  >
                 <div align="left">
-                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="140px" height="40px"/>
+                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="200px" height="40px"/>
                 </div>
                 <p class="codebar">{!! $rastreo !!}</p>
             </td>
             <td colspan='3' >
                 <div align="right">
-                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="140px" height="40px" />
+                    <img src="data:image/png;base64,' . {!! $barcode !!} . '" alt="barcode"  width="200px" height="40px" />
                 </div>
                 <p class="codebar">{!! $rastreo !!}</p>
             </td>
