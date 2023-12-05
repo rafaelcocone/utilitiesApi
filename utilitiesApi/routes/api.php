@@ -18,4 +18,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('v1/guias/', [   App\Http\Controllers\Api\V1\GuiasController::class, 'pruebas']);
+//Route::apiResource('v1/guias/',        App\Http\Controllers\Api\V1\GuiasController::class)->only('show');
+
+Route::apiResource('v1/guias/',        App\Http\Controllers\Api\V1\GuiasController::class)->only('show','store');
+
+//Route::post('v1/s/guias/', [   App\Http\Controllers\Api\V1\GuiasController::class, 'pruebas']);

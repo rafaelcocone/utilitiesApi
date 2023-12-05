@@ -11,7 +11,7 @@ class GuiasController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Response                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
      */
     public function index()
     {
@@ -26,8 +26,26 @@ class GuiasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $request->validate([
+            'guias' => 'required|array',
+            
+            'guias.*.empresa' => 'required|array',
+                'guias.*.empresa.nombre' => 'required|string',
+                'guias.*.empresa.direccion' => 'required|array',
+                    'guias.*.empresa.direccion.calle' => 'required|string',
+                    'guias.*.empresa.direccion.numero_exterior' => 'required|string',
+                    'guias.*.empresa.direccion.colonia' => 'required|string',
+                    'guias.*.empresa.direccion.estado' => 'required|string',
+                    'guias.*.empresa.direccion.municipio' => 'required|string',
+                    'guias.*.empresa.direccion.cp' => 'required|string',
+        ]);
+
+
+
+        return $request;
     }
+
 
     /**
      * Display the specified resource.
