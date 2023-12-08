@@ -23,10 +23,7 @@ Route::get('/guias/etiquetas', [   App\Http\Controllers\GuiasController::class, 
 
 Route::get('/guias/carta', [   App\Http\Controllers\GuiasController::class, 'carta'])->name('carta.pdf');
 
-
-
-
-
 Route::get('/guias/pruebas', [   App\Http\Controllers\GuiasController::class, 'pruebas'])->name('guias.pdf');
 
 
+ 

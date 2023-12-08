@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Guias;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\PdfGuiaRequest;
+
 class GuiasController extends Controller
 {
     /**
@@ -24,25 +26,9 @@ class GuiasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(PdfGuiaRequest $request)
     {
         
-        $request->validate([
-            'guias' => 'required|array',
-            
-            'guias.*.empresa' => 'required|array',
-                'guias.*.empresa.nombre' => 'required|string',
-                'guias.*.empresa.direccion' => 'required|array',
-                    'guias.*.empresa.direccion.calle' => 'required|string',
-                    'guias.*.empresa.direccion.numero_exterior' => 'required|string',
-                    'guias.*.empresa.direccion.colonia' => 'required|string',
-                    'guias.*.empresa.direccion.estado' => 'required|string',
-                    'guias.*.empresa.direccion.municipio' => 'required|string',
-                    'guias.*.empresa.direccion.cp' => 'required|string',
-        ]);
-
-
-
         return $request;
     }
 
