@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Guias;
 use Illuminate\Http\Request;
 
-use App\Http\Requests\PdfGuiaRequest;
+use App\Http\Requests\PdfApiGuiaRequest;
 
 class GuiasController extends Controller
 {
@@ -26,9 +26,14 @@ class GuiasController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(PdfGuiaRequest $request)
+    public function store(PdfApiGuiaRequest $request)
     {
         
+
+
+
+
+
         return $request;
     }
 

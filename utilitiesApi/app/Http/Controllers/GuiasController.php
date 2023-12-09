@@ -10,6 +10,9 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 use \Milon\Barcode\DNS1D;
 
+
+use App\Http\Requests\PdfGuiaRequest;
+
 class GuiasController extends Controller
 {
 
@@ -58,15 +61,13 @@ class GuiasController extends Controller
 
 
 
-    public function carta(Request $request){
+    public function carta(PdfGuiaRequest $request){
 
         $variables = $request->all();
 
         $rastreo =  $variables["data"]["rastreo"]["codigo_rastreo"];//'prueba';
         $codeguia =  $variables["data"]["rastreo"]["numero_guia"];//'PUEVS12345678';
         $guia =     $rastreo;
-
-
 
 
         $qrcode = base64_encode(

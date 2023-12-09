@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Guias extends Model
 {
     use HasFactory;
+
+    
 }
