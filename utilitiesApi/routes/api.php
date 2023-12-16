@@ -20,11 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //Route::apiResource('v1/guias/',        App\Http\Controllers\Api\V1\GuiasController::class)->only('show');
 
-Route::get('login', [LoginController::class, 'store'] );
+Route::post('login', [   App\Http\Controllers\Api\V1\LoginController::class, 'store']);
 
 Route::middleware('auth:sanctum')->group(function (){
     Route::apiResource('v1/guias/',        App\Http\Controllers\Api\V1\GuiasController::class)->only('show','store');
 });
 
 
-//Route::post('v1/s/guias/', [   App\Http\Controllers\Api\V1\GuiasController::class, 'pruebas']);
+//Route::get('v1/login/', [   App\Http\Controllers\Api\V1\LoginController::class, 'store']);
